@@ -83,7 +83,7 @@ func GetOrders(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusNoContent)
 		return
 	}
-
+	
 	// Кодируем список заказов в формат JSON и отправляем в ответе.
 	middlewares.EncodeJSONResponse(w, orders)
 }

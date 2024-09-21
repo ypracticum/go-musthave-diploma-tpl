@@ -31,7 +31,7 @@ func main() {
 
 	log.Printf("Running server on %s\n", config.endpoint)
 
-	jobQueueService := services.NewJobQueueService(ctx, 100, 2)
+	jobQueueService := services.NewJobQueueService(ctx, 100, 5)
 	accrualService := services.NewAccrualService(db, jobQueueService, config.accrualEndpoint)
 
 	if err := accrualService.StartCalculationAccruals(ctx); err != nil {
