@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/models"
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/services"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/models"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/services"
 )
 
 // userFieldType определяет тип для ключа, используемого для хранения данных пользователя в контексте.

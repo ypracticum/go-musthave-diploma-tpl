@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/utils"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/utils"
 )
 
 type OrderStatus string

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/models"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/models"
 )
 
 // Тип для ключей контекста, используемых для хранения сервисов.

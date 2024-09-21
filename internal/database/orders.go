@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/models"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/models"
 	"github.com/jackc/pgerrcode"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgconn"

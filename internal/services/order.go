@@ -6,9 +6,9 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/database"
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/models"
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/utils"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/database"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/models"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/utils"
 )
 
 var (

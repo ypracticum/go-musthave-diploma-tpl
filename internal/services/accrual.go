@@ -10,17 +10,17 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/database"
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/logger"
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/models"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/database"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/logger"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/models"
 	"go.uber.org/zap"
 )
 
 // AccrualService представляет сервис для обработки начислений.
 type AccrualService struct {
-	storage          accrualStorage          // Хранилище для работы с данными начислений.
-	jobQueueService  accrualJobQueueService  // Сервис очереди задач для управления заданиями.
-	externalEndpoint string                  // Внешний endpoint для получения данных начислений.
+	storage          accrualStorage         // Хранилище для работы с данными начислений.
+	jobQueueService  accrualJobQueueService // Сервис очереди задач для управления заданиями.
+	externalEndpoint string                 // Внешний endpoint для получения данных начислений.
 }
 
 // Интерфейс для хранилища начислений.
@@ -32,9 +32,9 @@ type accrualStorage interface {
 
 // Интерфейс для сервиса очереди задач начислений.
 type accrualJobQueueService interface {
-	Enqueue(job Job) // Добавление задания в очередь.
+	Enqueue(job Job)                          // Добавление задания в очередь.
 	ScheduleJob(job Job, delay time.Duration) // Планирование задания с задержкой.
-	PauseAndResume(delay time.Duration) // Приостановка и возобновление обработки заданий.
+	PauseAndResume(delay time.Duration)       // Приостановка и возобновление обработки заданий.
 }
 
 // Конструктор для создания нового экземпляра AccrualService.
@@ -153,14 +153,14 @@ const (
 
 // accrualDataResponse представляет структуру ответа от внешнего сервиса начислений.
 type accrualDataResponse struct {
-	ID      string             `json:"order"`            // Идентификатор заказа.
-	Status  accrualOrderStatus `json:"status"`           // Статус начисления.
-	Accrual *float64           `json:"accrual,omitempty"`// Сумма начисления (опционально).
+	ID      string             `json:"order"`             // Идентификатор заказа.
+	Status  accrualOrderStatus `json:"status"`            // Статус начисления.
+	Accrual *float64           `json:"accrual,omitempty"` // Сумма начисления (опционально).
 }
 
 var (
-	errNoOrder = errors.New("заказ не зарегистрирован")             // Ошибка: заказ не зарегистрирован.
-	errServer  = errors.New("внутренняя ошибка сервера")           // Ошибка: внутренняя ошибка сервера.
+	errNoOrder = errors.New("заказ не зарегистрирован")  // Ошибка: заказ не зарегистрирован.
+	errServer  = errors.New("внутренняя ошибка сервера") // Ошибка: внутренняя ошибка сервера.
 )
 
 const defaultRetryAfterDuration = 60 // Стандартная задержка повторной попытки в секундах.

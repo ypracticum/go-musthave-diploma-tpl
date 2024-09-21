@@ -1,6 +1,6 @@
 package models
 
-import "github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/utils"
+import "github.com/Renal37/go-musthave-diploma-tpl/internal/utils"
 
 type Balance struct {
 	Current   float64 `json:"current"`

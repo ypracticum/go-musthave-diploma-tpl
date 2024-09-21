@@ -4,11 +4,11 @@ import (
 	"context"
 	"log"
 
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/database"
-	router "github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/http"
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/logger"
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/services"
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/utils"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/database"
+	router "github.com/Renal37/go-musthave-diploma-tpl/internal/http"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/logger"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/services"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/utils"
 )
 
 func main() {

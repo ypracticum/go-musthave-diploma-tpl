@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/middlewares"
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/models"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/middlewares"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/models"
 )
 
 // GetBalance получает баланс авторизованного пользователя

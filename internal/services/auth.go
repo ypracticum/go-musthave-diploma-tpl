@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/database"
-	"github.com/Renal37/go-musthave-diploma-tpl/tree/master/internal/models"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/database"
+	"github.com/Renal37/go-musthave-diploma-tpl/internal/models"
 	"golang.org/x/crypto/bcrypt"
 )
 
@@ -24,7 +24,7 @@ type AuthService struct {
 
 // AuthStorage определяет интерфейс для взаимодействия с хранилищем данных пользователей
 type AuthStorage interface {
-	CreateUser(ctx context.Context, user database.UserDB) error         // Создание нового пользователя
+	CreateUser(ctx context.Context, user database.UserDB) error           // Создание нового пользователя
 	FindUser(ctx context.Context, login string) (*database.UserDB, error) // Поиск пользователя по логину
 }
 
