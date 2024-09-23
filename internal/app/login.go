@@ -35,7 +35,7 @@ func Login(w http.ResponseWriter, r *http.Request) {
 
 		// Обрабатываем ошибку, если пароль неверный.
 		if errors.Is(err, services.ErrPasswordIsIncorrect) {
-			http.Error(w, "Пароль неверный", http.StatusUnauthorized)
+			http.Error(w, "Неверный пароль", http.StatusUnauthorized)
 			return
 		}
 

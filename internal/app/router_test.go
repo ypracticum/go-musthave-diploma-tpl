@@ -60,7 +60,7 @@ func TestRegisterRoute(t *testing.T) {
 				return bytes.NewBuffer(data)
 			},
 			expectedCode:    http.StatusBadRequest,
-			expectedMessage: "Запрос не содержит логина или пароля\n",
+			expectedMessage: "Запрос не содержит логин или пароль\n",
 		},
 		{
 			testName:   "Должен вернуть ошибку валидации из-за отсутствия пароля пользователя",
@@ -72,7 +72,7 @@ func TestRegisterRoute(t *testing.T) {
 				return bytes.NewBuffer(data)
 			},
 			expectedCode:    http.StatusBadRequest,
-			expectedMessage: "Запрос не содержит логина или пароля\n",
+			expectedMessage: "Запрос не содержит логин или пароль\n",
 		},
 		{
 			testName:   "Должен вернуть ошибку, если пользователь уже зарегистрирован",
@@ -197,7 +197,7 @@ func TestLoginRoute(t *testing.T) {
 				return bytes.NewBuffer(data)
 			},
 			expectedCode:    http.StatusBadRequest,
-			expectedMessage: "Запрос не содержит логина или пароля\n",
+			expectedMessage: "Запрос не содержит логин или пароль\n",
 		},
 		{
 			testName:   "Должен вернуть ошибку валидации из-за отсутствия пароля пользователя",
@@ -209,7 +209,7 @@ func TestLoginRoute(t *testing.T) {
 				return bytes.NewBuffer(data)
 			},
 			expectedCode:    http.StatusBadRequest,
-			expectedMessage: "Запрос не содержит логина или пароля\n",
+			expectedMessage: "Запрос не содержит логин или пароль\n",
 		},
 		{
 			testName:   "Должен вернуть ошибку, если пользователь не существует",
