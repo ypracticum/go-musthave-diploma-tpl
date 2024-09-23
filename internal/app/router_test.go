@@ -48,7 +48,7 @@ func TestRegisterRoute(t *testing.T) {
 			methodName:      "POST",
 			targetURL:       "/api/user/register",
 			expectedCode:    http.StatusBadRequest,
-			expectedMessage: "Ошибка при обработке данных: неожиданный конец JSON ввода\n",
+			expectedMessage: "Ошибка при разборе данных JSON: unexpected end of JSON input\n",
 		},
 		{
 			testName:   "Должен вернуть ошибку валидации из-за отсутствия логина пользователя",
@@ -185,7 +185,7 @@ func TestLoginRoute(t *testing.T) {
 			methodName:      "POST",
 			targetURL:       "/api/user/login",
 			expectedCode:    http.StatusBadRequest,
-			expectedMessage: "Ошибка при обработке данных: неожиданный конец JSON ввода\n",
+			expectedMessage: "Ошибка при разборе данных JSON: unexpected end of JSON input\n",
 		},
 		{
 			testName:   "Должен вернуть ошибку валидации из-за отсутствия логина пользователя",
@@ -229,10 +229,10 @@ func TestLoginRoute(t *testing.T) {
 				return bytes.NewBuffer(data)
 			},
 			expectedCode:    http.StatusUnauthorized,
-			expectedMessage: "Пользователь не существует\n",
+			expectedMessage: "Пользователь с логином user не существует\n",
 		},
 		{
-			testName:   "Должен вернуть ошибку, если пароль неверный",
+			testName:   "Должен вернуть ошибку, если Неверный пароль",
 			methodName: "POST",
 			targetURL:  "/api/user/login",
 			test: func(t *testing.T) {
